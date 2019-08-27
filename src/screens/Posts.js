@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { View, Text, } from 'react-native';
+import { View, Text, Image, Button } from 'react-native';
+import ImagePicker from 'react-native-image-picker';
 
 import PostsList from '../components/PostsList';
 import api from '../services/api';
@@ -8,7 +9,8 @@ class Posts extends Component {
 
   state = {
     posts: [],
-    error: ''
+    photo: null,
+    error: '',
   };
 
   async componentDidMount() {
@@ -20,9 +22,32 @@ class Posts extends Component {
     };
   };
 
+  onChoosePhoto = () => {
+    const options = {
+      noData: true,
+    };
+    ImagePicker.launchImageLibrary(options, response => {
+      if (response.uri) {
+        this.setState({ photo: response });
+      }
+    });
+  };
+
   render() {
+    const { photo } = this.state;
+
     return (
       <View>
+        {/* <View style={{  alignItems: 'center', justifyContent: 'center', }}>
+          {photo && (
+            <Image
+              source={{ uri: photo.uri }}
+              style={{ width: 300, height: 300, }}
+            />
+          )}
+          <Button title="Choose Photo" onPress={this.onChoosePhoto} style={{ margin: 30, }} />
+        </View> */}
+
         <PostsList posts={this.state.posts} />
       </View>
     );

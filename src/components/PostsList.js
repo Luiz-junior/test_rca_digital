@@ -19,7 +19,7 @@ const PostsList = props => {
                     <View style={styles.container}>
                         <Image source={{uri: item.image}} style={styles.photo} />
 
-                       
+                        
                     </View>
                     )
                 }
