@@ -9,14 +9,15 @@
 
 - npm install -g json-server
 
-depois basta rodar o comando: json-server --watch db.json
+- depois basta rodar o comando: json-server --watch db.json
 
 Credenciais de Login:
-email: luiz@gmail.com
-senha: 123
 
-email: jr@gmail.com
-senha: 123
+  email: luiz@gmail.com
+  senha: 123
+
+  email: jr@gmail.com
+  senha: 123
 
 
 
