@@ -32,6 +32,8 @@ target 'test_rca_digital' do
 
   pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'
 
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
   target 'test_rca_digitalTests' do
     inherit! :search_paths
     # Pods for testing

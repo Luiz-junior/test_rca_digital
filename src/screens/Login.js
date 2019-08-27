@@ -79,9 +79,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    /* backgroundColor: 'rgb(96, 11, 0)', */
-    /* backgroundColor: 'linear-gradient(96 11 0, 189 71 71)', */
-    /* backgroundColor: 'linear-gradient(rgb(96, 11, 0), rgb(189, 71, 71))', */
     paddingBottom: '10%',
   },
   title: {

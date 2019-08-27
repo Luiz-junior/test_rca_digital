@@ -18,7 +18,7 @@ const Header = props => {
 
             <Image 
                 style={styles.avatar}
-                source={{ uri: 'https://thumbs.dreamstime.com/b/male-avatar-icon-flat-style-male-user-icon-cartoon-man-avatar-vector-stock-91602735.jpg' }}
+                source={{ uri: 'https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg' }}
             /> 
 
         </LinearGradient>
