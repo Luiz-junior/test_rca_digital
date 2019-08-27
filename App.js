@@ -4,17 +4,16 @@ import Login from './src/screens/Login';
 import Posts from './src/screens/Posts';
 
 const AppNavigator = createStackNavigator({
- 
-  Posts: {
-    screen: Posts,
-  },
+
   Login: {
     screen: Login,
     navigationOptions: {
       header: null,
     },
   },
-  
+  Posts: {
+    screen: Posts,
+  },
 })
 
 export default createAppContainer(AppNavigator);
