@@ -1,20 +1,35 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, TouchableHighlight, TextInput } from 'react-native';
 
-const users = [
-  { email: 'luiz@gmail.com', password: '123123' },
-  { email: 'junior@gmail.com', password: '123123' },
-];
+import api from '../services/api';
 
 class Login extends Component {
 
   state ={
     email: '',
-    password: ''
+    password: '',
+    error: '',
   };
 
-  onLogin = () => {
-    
+  onLogin = async () => {
+    const { email, password } = this.state;
+
+    try {
+      const response = await api.get('/users');
+      const users = response.data;
+
+      const user = users.filter(u => {
+        return u.email === email && u.password === password;
+      });
+
+      user.length === 1 
+      ? this.props.navigation.navigate('Posts')
+      : alert('Usuário ou senha incorretos!');
+      
+    } catch (error) {
+      this.setState({ error });
+    }
+
   };
 
   render() {
@@ -59,6 +74,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#90240D',
+    paddingBottom: '10%',
   },
   title: {
     fontSize: 20,
