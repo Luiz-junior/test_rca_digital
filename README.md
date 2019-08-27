@@ -5,7 +5,7 @@
 - npm install
 - react-native run-android
 
-### Está sendo usado o Json Server como fake API, para rodar a api primeiro é necessário instalar o Json Server como dependência global
+##### Está sendo usado o Json Server como fake API, para rodar a api primeiro é necessário instalar o Json Server como dependência global
 
 - npm install -g json-server
 
