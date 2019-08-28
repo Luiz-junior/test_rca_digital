@@ -24,7 +24,7 @@ class Login extends Component {
       });
 
       user.length === 1 
-      ? this.props.navigation.navigate('Posts')
+      ? this.props.navigation.navigate('Home')
       : alert('Usuário ou senha incorretos!');
       
     } catch (error) {
@@ -37,7 +37,6 @@ class Login extends Component {
     const { email, password } = this.state;
 
     return (
-      
         <LinearGradient
           colors={['rgb(96, 11, 0)', 'rgb(189, 71, 71)']}
           style={styles.container}
@@ -69,7 +68,6 @@ class Login extends Component {
           </TouchableHighlight>
         </View>
         </LinearGradient>
-      
     );
   }
 };

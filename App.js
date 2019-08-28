@@ -25,9 +25,6 @@ const AppNavigator = createStackNavigator({
       header: null,
     },
   },
-  Posts: {
-    screen: Posts,
-  },
 })
 
 export default createAppContainer(AppNavigator);

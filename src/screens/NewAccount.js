@@ -17,11 +17,21 @@ class Login extends Component {
           noData: true,
         };
         ImagePicker.launchImageLibrary(options, response => {
-            if (response.uri) {
+            if (response.uri) 
                 this.setState({ photo: response });
-                console.log('foto', this.state.photo)
-            }
         });        
+    };
+
+    onContinue = async () => {
+        const { photo } = this.state;
+        try {
+            const response = await api.post('/photos', 
+                { id: 4, image: photo.uri, favorite: false } 
+            );
+        } catch (error) {
+            alert("erro")
+            this.setState({ error });
+        }
     };
 
     render() {
@@ -29,7 +39,6 @@ class Login extends Component {
 
         return (
             <LinearGradient colors={['rgb(96, 11, 0)', 'rgb(189, 71, 71)']} style={styles.container} >
-
                 <Text style={styles.title}> Post ME 
                     <Text style={{ fontFamily: 'Lato-Bold', }}> APP </Text> 
                 </Text>
@@ -38,32 +47,36 @@ class Login extends Component {
                 <Text style={styles.subtitle}>
                     <Text style={styles.textUser}>Natália,</Text> seja bem-vinda! 
                 </Text>
+
                 <Text style={styles.content}>
                     Para iniciar seu primeiro acesso,
                     por favor preencha com seus dados abaixo:
                 </Text>
 
                 <View style={{  alignItems: 'center', justifyContent: 'center', }}>
-                    {photo && (
-                        <Image
-                        source={{ uri: photo.uri }}
-                        style={styles.image}
-                        />
-                    )}
-
-                    <TouchableHighlight onPress={this.onChoosePhoto} style={styles.choosePhotoButton}>
-                        <View style={{ alignItems: 'center' }}>
+                    { photo ? 
+                        (
                             <Image
-                                style={styles.PhotoImage}
-                                source={{ uri: 'https://icon-library.net/images/camera-icon-white/camera-icon-white-15.jpg' }}
+                            /* source={{ uri: photo.uri }} */
+                            source={{ uri: photo.uri }}
+                            style={styles.image}
                             />
-                            <Text style={styles.photoText}>Adicionar foto</Text>
-                        </View>
-                    </TouchableHighlight>
-                    
+                        ) :
+                        (
+                            <TouchableHighlight onPress={this.onChoosePhoto} style={styles.choosePhotoButton}>
+                                <View style={{ alignItems: 'center' }}>
+                                    <Image
+                                        style={styles.PhotoImage}
+                                        source={{ uri: 'https://icon-library.net/images/camera-icon-white/camera-icon-white-15.jpg' }}
+                                    />
+                                    <Text style={styles.photoText}>Adicionar foto</Text>
+                                </View>
+                            </TouchableHighlight>
+                        )
+                    } 
                 </View> 
 
-                <TouchableHighlight style={styles.registerButton} onPress={() => {}} underlayColor="#fff"> 
+                <TouchableHighlight style={styles.registerButton} onPress={this.onContinue} underlayColor="#fff"> 
                     <Text style={styles.textButton}>Continuar</Text>
                 </TouchableHighlight>
             </View>
@@ -112,6 +125,7 @@ const styles = StyleSheet.create({
   image: {
     width: 100, height: 100,
     borderRadius: 100,
+    marginTop: 30,
   },    
   choosePhotoButton: {
     marginTop: 30, 

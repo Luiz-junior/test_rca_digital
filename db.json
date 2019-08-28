@@ -1,12 +1,47 @@
 {
   "users": [
-    { "email": "luiz@gmail.com", "password": "123" },
-    { "email": "jr@gmail.com", "password": "123" }
+    {
+      "email": "luiz@gmail.com",
+      "password": "123"
+    },
+    {
+      "email": "jr@gmail.com",
+      "password": "123"
+    }
   ],
   "photos": [
-    { "id": "1", "image": "https://thumbs.dreamstime.com/b/male-avatar-icon-flat-style-male-user-icon-cartoon-man-avatar-vector-stock-91602735.jpg", "favorite": true},
-    { "id": "2", "image": "https://thumbs.dreamstime.com/b/male-avatar-icon-flat-style-male-user-icon-cartoon-man-avatar-vector-stock-91602735.jpg", "favorite": false},
-    { "id": "3", "image": "https://thumbs.dreamstime.com/b/male-avatar-icon-flat-style-male-user-icon-cartoon-man-avatar-vector-stock-91602735.jpg", "favorite": true}
+    {
+      "id": 1,
+      "image": "https://thumbs.dreamstime.com/b/male-avatar-icon-flat-style-male-user-icon-cartoon-man-avatar-vector-stock-91602735.jpg",
+      "favorite": true
+    },
+    {
+      "id": 2,
+      "image": "https://thumbs.dreamstime.com/b/male-avatar-icon-flat-style-male-user-icon-cartoon-man-avatar-vector-stock-91602735.jpg",
+      "favorite": false
+    },
+    {
+      "id": 3,
+      "image": "https://thumbs.dreamstime.com/b/male-avatar-icon-flat-style-male-user-icon-cartoon-man-avatar-vector-stock-91602735.jpg",
+      "favorite": true
+    },
+    {
+      "height": 480,
+      "width": 480,
+      "type": "image/jpeg",
+      "fileName": "IMG_20190827_195635.jpg",
+      "fileSize": 3846,
+      "path": "/storage/emulated/0/DCIM/Camera/IMG_20190827_195635.jpg",
+      "uri": "content://media/external/images/media/23",
+      "isVertical": true,
+      "originalRotation": 0,
+      "timestamp": "2019-08-27T23:56:36Z",
+      "id": "Qu1Q6UE"
+    },
+    {
+      "id": 4,
+      "image": "content://media/external/images/media/22",
+      "favorite": false
+    }
   ]
 }
-  
