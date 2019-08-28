@@ -26,20 +26,52 @@
       "favorite": true
     },
     {
-      "height": 480,
-      "width": 480,
-      "type": "image/jpeg",
-      "fileName": "IMG_20190827_195635.jpg",
-      "fileSize": 3846,
-      "path": "/storage/emulated/0/DCIM/Camera/IMG_20190827_195635.jpg",
-      "uri": "content://media/external/images/media/23",
-      "isVertical": true,
-      "originalRotation": 0,
-      "timestamp": "2019-08-27T23:56:36Z",
-      "id": "Qu1Q6UE"
+      "id": 4,
+      "image": "content://media/external/images/media/22",
+      "favorite": false
     },
     {
-      "id": 4,
+      "id": 5,
+      "image": "content://media/external/images/media/23",
+      "favorite": false
+    },
+    {
+      "id": 6,
+      "image": "content://media/external/images/media/23",
+      "favorite": false
+    },
+    {
+      "id": 7,
+      "image": "content://media/external/images/media/23",
+      "favorite": false
+    },
+    {
+      "id": 8,
+      "image": "content://media/external/images/media/23",
+      "favorite": false
+    },
+    {
+      "id": 9,
+      "image": "content://media/external/images/media/22",
+      "favorite": false
+    },
+    {
+      "id": 10,
+      "image": "content://media/external/images/media/23",
+      "favorite": false
+    },
+    {
+      "id": 11,
+      "image": "content://media/external/images/media/23",
+      "favorite": false
+    },
+    {
+      "id": 12,
+      "image": "content://media/external/images/media/23",
+      "favorite": false
+    },
+    {
+      "id": 13,
       "image": "content://media/external/images/media/22",
       "favorite": false
     }

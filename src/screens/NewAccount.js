@@ -9,8 +9,16 @@ class Login extends Component {
 
     state = {
         photo: null,
+        lastId: 0,
         error: '',
     };
+
+    async componentDidMount() {
+        const response = await api.get('/photos');
+        const lastId = response.data[response.data.length -1];
+
+        this.setState({ lastId: lastId.id });
+    }
 
     onChoosePhoto = () => {
         const options = {
@@ -23,13 +31,13 @@ class Login extends Component {
     };
 
     onContinue = async () => {
-        const { photo } = this.state;
+        const { photo, lastId } = this.state;
         try {
-            const response = await api.post('/photos', 
-                { id: 4, image: photo.uri, favorite: false } 
-            );
+            await api.post('/photos', { id: lastId + 1, image: photo.uri, favorite: false } );
+            
+            this.props.navigation.navigate('Home');
         } catch (error) {
-            alert("erro")
+            alert("Erro: ", error);
             this.setState({ error });
         }
     };

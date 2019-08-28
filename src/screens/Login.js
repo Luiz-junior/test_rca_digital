@@ -24,7 +24,7 @@ class Login extends Component {
       });
 
       user.length === 1 
-      ? this.props.navigation.navigate('Home')
+      ? this.props.navigation.navigate('NewAccount')
       : alert('Usuário ou senha incorretos!');
       
     } catch (error) {
