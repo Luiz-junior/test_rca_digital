@@ -33,11 +33,11 @@ class Login extends Component {
     onContinue = async () => {
         const { photo, lastId } = this.state;
         try {
-            await api.post('/photos', { id: lastId + 1, image: photo.uri, favorite: false } );
+            await api.post('/photos', { id: lastId + 1, url: photo.uri, favorite: false } );
             
             this.props.navigation.navigate('Home');
         } catch (error) {
-            alert("Erro: ", error);
+            alert("Selecione uma foto para continuar!");
             this.setState({ error });
         }
     };
@@ -65,7 +65,6 @@ class Login extends Component {
                     { photo ? 
                         (
                             <Image
-                            /* source={{ uri: photo.uri }} */
                             source={{ uri: photo.uri }}
                             style={styles.image}
                             />

@@ -12,67 +12,42 @@
   "photos": [
     {
       "id": 1,
-      "image": "https://thumbs.dreamstime.com/b/male-avatar-icon-flat-style-male-user-icon-cartoon-man-avatar-vector-stock-91602735.jpg",
+      "url": "https://thumbs.dreamstime.com/b/male-avatar-icon-flat-style-male-user-icon-cartoon-man-avatar-vector-stock-91602735.jpg",
       "favorite": true
     },
     {
       "id": 2,
-      "image": "https://thumbs.dreamstime.com/b/male-avatar-icon-flat-style-male-user-icon-cartoon-man-avatar-vector-stock-91602735.jpg",
+      "url": "https://thumbs.dreamstime.com/b/male-avatar-icon-flat-style-male-user-icon-cartoon-man-avatar-vector-stock-91602735.jpg",
       "favorite": false
     },
     {
       "id": 3,
-      "image": "https://thumbs.dreamstime.com/b/male-avatar-icon-flat-style-male-user-icon-cartoon-man-avatar-vector-stock-91602735.jpg",
+      "url": "https://thumbs.dreamstime.com/b/male-avatar-icon-flat-style-male-user-icon-cartoon-man-avatar-vector-stock-91602735.jpg",
       "favorite": true
     },
     {
       "id": 4,
-      "image": "content://media/external/images/media/22",
+      "url": "content://media/external/images/media/22",
       "favorite": false
     },
     {
       "id": 5,
-      "image": "content://media/external/images/media/23",
+      "url": "content://media/external/images/media/23",
       "favorite": false
     },
     {
       "id": 6,
-      "image": "content://media/external/images/media/23",
+      "url": "content://media/external/images/media/23",
       "favorite": false
     },
     {
       "id": 7,
-      "image": "content://media/external/images/media/23",
+      "url": "content://media/external/images/media/23",
       "favorite": false
     },
     {
       "id": 8,
-      "image": "content://media/external/images/media/23",
-      "favorite": false
-    },
-    {
-      "id": 9,
-      "image": "content://media/external/images/media/22",
-      "favorite": false
-    },
-    {
-      "id": 10,
-      "image": "content://media/external/images/media/23",
-      "favorite": false
-    },
-    {
-      "id": 11,
-      "image": "content://media/external/images/media/23",
-      "favorite": false
-    },
-    {
-      "id": 12,
-      "image": "content://media/external/images/media/23",
-      "favorite": false
-    },
-    {
-      "id": 13,
-      "image": "content://media/external/images/media/22",
+      "url": "content://media/external/images/media/23",
       "favorite": false
     }
   ]
